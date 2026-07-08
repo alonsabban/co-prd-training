@@ -252,11 +252,11 @@
   <div class="nav-brand">co‑<span>prd</span> &nbsp;Quick Start</div>
   <div class="nav-right">
     <span class="slide-counter" id="counter">1 / 11</span>
-    <button class="nav-btn" id="prevBtn" disabled="">← Prev</button>
-    <button class="nav-btn" id="nextBtn">Next →</button>
+    <button class="nav-btn" id="prevBtn">← Prev</button>
+    <button class="nav-btn" id="nextBtn" disabled="">Next →</button>
   </div>
 </nav>
-<div class="progress-bar"><div class="progress-fill" id="progress" style="width: 9.09091%;"></div></div>
+<div class="progress-bar"><div class="progress-fill" id="progress" style="width: 100%;"></div></div>
 
 <div class="slides-wrapper">
 
@@ -468,7 +468,7 @@
         The AI can fill gaps using <b>general knowledge</b> — but only when <em>you</em> say go.
       </div>
     </div>
-    <div class="ann info" style="top: 58.24%; left: 84.58%;">
+    <div class="ann info" style="top: 30.84%; left: 81.48%;">
       <div class="ann-bubble">
         Edit each PRD field independently — changes stay isolated to that field only.
       </div>
@@ -501,7 +501,6 @@
 </div>
 
 <!-- ══ S10: FEEDBACK (slide12.png) ════════════════════════════════════ -->
-<!-- User menu dropdown top-right with "Feedback" option -->
 <div class="slide" id="s10">
   <div class="step-header">
     <div class="step-num">9</div>
@@ -510,7 +509,7 @@
   </div>
   <div class="annotated">
     <img src="slides/slide12.png" alt="Feedback">
-    <div class="ann tip" style="top: 45.27%; left: 24.98%;">
+    <div class="ann tip" style="top: 46.87%; left: 25.18%;">
       <div class="ann-bubble">
         <strong>Feedback button</strong>The team is notified automatically -&nbsp; Use it !</div>
     </div>
@@ -596,7 +595,7 @@
   }
 
   // Baked arrow data: top/left/rot/hidden per slide per bubble index
-  const ARROW_DATA = {"s2":[{"top":"23.71%","left":"66.32%","rot":"179.4","hidden":"0"},{"top":"36.86%","left":"54.07%","rot":"0","hidden":"1"}],"s3":[{"top":"24.3%","left":"69.5%","rot":"-71.3","hidden":"0"},{"top":"42.46%","left":"62.77%","rot":"144.4","hidden":"0"}],"s4":[{"top":"69.4%","left":"3.98%","rot":"0","hidden":"1"},{"top":"68.49%","left":"44.11%","rot":"0","hidden":"1"}],"s5":[{"top":"68.53%","left":"34%","rot":"0","hidden":"0"},{"top":"85.14%","left":"82.53%","rot":"179.3","hidden":"0"}],"s6":[{"top":"72.56%","left":"33.95%","rot":"0","hidden":"0"},{"top":"85.42%","left":"82.19%","rot":"-179.6","hidden":"0"}],"s7":[{"top":"46.25%","left":"41.77%","rot":"0","hidden":"1"}],"s8":[{"top":"60.48%","left":"8.1%","rot":"0","hidden":"1"},{"top":"63.44%","left":"22.96%","rot":"0","hidden":"0"},{"top":"60.31%","left":"78.13%","rot":"0","hidden":"1"},{"top":"63.33%","left":"37.99%","rot":"0","hidden":"1"}],"s9":[{"top":"26.53%","left":"76.42%","rot":"89.6","hidden":"0"}],"s10":[{"top":"51.61%","left":"38.36%","rot":"0","hidden":"0"}]};
+  const ARROW_DATA = {"s2":[{"top":"23.71%","left":"66.32%","rot":"179.4","hidden":"0"},{"top":"36.86%","left":"54.07%","rot":"0","hidden":"1"}],"s3":[{"top":"24.3%","left":"69.5%","rot":"-71.3","hidden":"0"},{"top":"42.46%","left":"62.77%","rot":"144.4","hidden":"0"}],"s4":[{"top":"69.4%","left":"3.98%","rot":"0","hidden":"1"},{"top":"68.49%","left":"44.11%","rot":"0","hidden":"1"}],"s5":[{"top":"68.53%","left":"34%","rot":"0","hidden":"0"},{"top":"85.14%","left":"82.53%","rot":"179.3","hidden":"0"}],"s6":[{"top":"72.56%","left":"33.95%","rot":"0","hidden":"0"},{"top":"85.42%","left":"82.19%","rot":"-179.6","hidden":"0"}],"s7":[{"top":"46.25%","left":"41.77%","rot":"0","hidden":"1"}],"s8":[{"top":"60.48%","left":"8.1%","rot":"0","hidden":"1"},{"top":"63.44%","left":"22.96%","rot":"0","hidden":"0"},{"top":"60.31%","left":"78.13%","rot":"0","hidden":"1"},{"top":"63.33%","left":"37.99%","rot":"0","hidden":"1"}],"s9":[{"top":"26.53%","left":"76.42%","rot":"89.6","hidden":"0"}],"s10":[{"top":"51.9%","left":"38.48%","rot":"0","hidden":"0"}]};
 
   function createArrow(ann) {
     const color = arrowColor(ann);
@@ -1138,7 +1137,7 @@
       const cloneS1 = clone.querySelector('#s1');
       if (cloneS1) cloneS1.classList.add('active');
       const cloneCounter = clone.querySelector('#counter');
-      if (cloneCounter) cloneCounter.textContent = '1 / 11';
+      if (cloneCounter) cloneCounter.textContent = '1 / ' + TOTAL;
       const cloneDots = clone.querySelector('#dots');
       if (cloneDots) cloneDots.innerHTML = '';
       const cloneBar = clone.querySelector('#em-bar');
